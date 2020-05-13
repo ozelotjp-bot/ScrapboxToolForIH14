@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScrapboxToolForIH14</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+    const create = (code) => {
+      const now = new Date()
+      const yyyy = now.getFullYear()
+      const mm = ('0' + (now.getMonth() + 1)).slice(-2)
+      const dd = ('0' + now.getDate()).slice(-2)
+      location.href = `https://scrapbox.io/2020-IH14/${code}_${yyyy}${mm}${dd}?body=%23${code}`
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a href="/" class="navbar-brand">
+          ScrapboxToolForIH14
+        </a>
+        </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="mt-4">講義ノートを作成</h1>
+      <div class="mt-4 alert alert-warning">
+        どの曜日を押しても今日の日付でノートを作成します。<br />
+        別の日付に変更したい場合は、ページ移動後にタイトル名を変更してください。
+      </div>
+      <table class="mt-4 table table-bordered text-center">
+        <thead>
+          <tr>
+            <th></th>
+            <th style="width: 15%;">月</th>
+            <th style="width: 15%;">火</th>
+            <th style="width: 15%;">水</th>
+            <th style="width: 15%;">木</th>
+            <th style="width: 15%;">金</th>
+            <th style="width: 15%;">土</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>１限</th>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('ND4S')">ND4S</a></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('IH4C')">IH4C</a></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('ST42')">ST42</a></td>
+            <td></td>
+            <td></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('EL4S')">EL4S</a></td>
+          </tr>
+          <tr>
+            <th>２限</th>
+            <td>
+              <div class="btn-group">
+                <a class="btn btn-outline-primary btn-sm" onclick="create('FE4S')">FE4S</a>
+                <a class="btn btn-outline-primary btn-sm" onclick="create('AP4S')">AP4S</a>
+                <a class="btn btn-outline-primary btn-sm" onclick="create('CW4S')">CW4S</a>
+              </div>
+            </td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('IH4C')">IH4C</a></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('ST42')">ST42</a></td>
+            <td></td>
+            <td></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('EL4S')">EL4S</a></td>
+          </tr>
+          <tr>
+            <th>３限</th>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('IH4C')">IH4C</a></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('IH4C')">IH4C</a></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('IT41')">IT41</a></td>
+            <td></td>
+            <td></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('EL4S')">EL4S</a></td>
+          </tr>
+          <tr>
+            <th>４限</th>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('IH4C')">IH4C</a></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('FX41')">FX41</a></td>
+            <td></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('IO41')">IO41</a></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('NT43')">NT43</a></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('EL4S')">EL4S</a></td>
+          </tr>
+          <tr>
+            <th>５限</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a class="btn btn-outline-primary btn-block btn-sm" onclick="create('NT43')">NT43</a></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
